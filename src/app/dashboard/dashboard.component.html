@@ -1,4 +1,16 @@
 <p>
-  You have logged in successfully. 
-  <a routerLink="/">Go back</a>
+  Welcome Admin
+  <a routerLink="/">Logout</a>
 </p>
+<div class = "admin">
+  <h2>Admin List</h2>
+  
+  <ul *ngFor="let employee of employees">
+  <li>{{employee.name}} -  {{employee.position}} - {{employee.country}} - {{employee.club}}</li>
+</ul>
+
+<ul *ngFor="let player of players">
+  <li>{{player.name}} -  {{player.position}} - {{player.country}} - {{player.club}}</li>
+</ul>
+
+</div>

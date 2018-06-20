@@ -7,10 +7,12 @@ import { UserService } from '../user.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  players = [];
 
   constructor(private user: UserService) { }
 
   ngOnInit() {
+    this.players = this.user.getPlayers();
   }
 
 }

@@ -1,4 +1,13 @@
 <p>
-  You have registered successfully. 
-  <a routerLink="/">Go back</a>
+  Wemcome User 
+  <a routerLink="/">Logout</a>
 </p>
+
+<div class = "admin">
+    <h2>User List</h2>
+      
+  <ul *ngFor="let player of players">
+    <li>{{player.name}} -  {{player.position}} - {{player.country}} - {{player.club}}</li>
+  </ul>
+  </div>
+  

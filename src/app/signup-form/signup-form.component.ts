@@ -22,8 +22,8 @@ export class SignupFormComponent implements OnInit {
     var confirmpassword = e.target.elements[2].value;
     
   	if(username == 'admin' && password == 'admin'&& confirmpassword == 'admin') {
-      this.user.setUserLoggedIn;
-  		this.router.navigate(['home']);
-  	} 
+          this.router.navigate(['dashboard']);} 
+          else{ (username == 'user' && password == 'user'&& confirmpassword == 'user')
+          this.router.navigate(['home']);}
   }
 }

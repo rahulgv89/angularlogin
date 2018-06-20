@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{Router} from '@angular/router'
-import { UserService } from '../user.service';
+//import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login-form',
@@ -8,8 +8,13 @@ import { UserService } from '../user.service';
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
+  // emps = [];
+  // admin = 'all';
+  // uemps = [];
+  // user:UserService;
 
-  constructor(private router:Router, private user:UserService) { }
+
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -20,8 +25,8 @@ export class LoginFormComponent implements OnInit {
   	var password = e.target.elements[1].value;
   	
   	if(username == 'admin' && password == 'admin') {
-      this.user.setUserLoggedIn;
-  		this.router.navigate(['dashboard']);
-  	} 
+          this.router.navigate(['dashboard']);}
+         else{ (username == 'user' && password == 'user') 
+            this.router.navigate(['home']);	}
    }
   }
